@@ -1,2 +1,2 @@
-# Exercises of week 1 of the course Data Science Fundamentals
-All exercises of week 1 will be shown down here.
+# Exercises of Data Science Fundamentals
+All exercises and assignments will be shown down here.
