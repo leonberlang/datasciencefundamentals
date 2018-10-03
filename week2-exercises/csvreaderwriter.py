@@ -18,9 +18,6 @@ newplayername = input("\nWhat footballer (name) do you want to add to the file? 
 newplayerclub = input("What club does this player currently play for? ").strip()
 newplayervalue = int(input("What is the players value in milli0ns without the zer0s: ").strip()) 
 
-#appending instead of replacing
-players = open("players1.txt", "a")
-
 #writing to both files, different ways of displaying the values
 newinputtxt = newplayername + " is a player of " + newplayerclub + " worth $" + str(newplayervalue * 1000000) + "\n" # no dots to see it more clear though
 newinputcsv = newplayername + "," + newplayerclub + "," + str(newplayervalue) + "\n"  
