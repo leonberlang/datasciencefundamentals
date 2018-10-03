@@ -21,4 +21,3 @@ for word in sentence:
 
 newsentence = " ".join(newsentence)
 print("\nYour sentence should be like this:" + "\n" + newsentence)
-	
