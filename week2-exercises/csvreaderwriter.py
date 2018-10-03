@@ -19,7 +19,7 @@ newplayerclub = input("What club does this player currently play for? ").strip()
 newplayervalue = int(input("What is the players value in milli0ns without the zer0s: ").strip()) 
 
 #writing to both files, different ways of displaying the values
-newinputtxt = newplayername + " is a player of " + newplayerclub + " worth $" + str(newplayervalue * 1000000) + "\n" # no dots to see it more clear though
+newinputtxt = newplayername + " is a player of " + newplayerclub + " worth $" + str(newplayervalue * 1000000) + "\n" # harder to read in file, no decimal thousand seperator 
 newinputcsv = newplayername + "," + newplayerclub + "," + str(newplayervalue) + "\n"  
 
 players.write(newinputtxt)
