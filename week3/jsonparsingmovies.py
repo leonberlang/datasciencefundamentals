@@ -3,8 +3,7 @@ import json
 f = open("movies.json")
 movies = json.load(f) #more readable version in the variable movies
 
-yearinput = input("What year needs to be the film out of? ").strip()
-yearinput = int(yearinput)
+yearinput = int(input("What year needs to be the film out of? ")).strip()
 
 for movie in movies:
 	year = movie["year"]
