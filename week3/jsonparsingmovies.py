@@ -1,17 +1,10 @@
 import json
 
-# with open("movies.json") as f:
-#movies = json.load(f)
-
 f = open("movies.json")
 movies = json.load(f) #more readable version in the variable movies
 
 yearinput = input("What year needs to be the film out of? ").strip()
 yearinput = int(yearinput)
-
-# checken of de key al bestaat (de filmmaker)
-# anders in dictionary de key aanmaken en dan de value +1
-# sorteren op basis van een waarde (volgende week)
 
 for movie in movies:
 	year = movie["year"]
