@@ -58,7 +58,6 @@ def mutations(): # function so you can start over again with everything until 'q
 		newpolitician = addfirstname + "," + addname + "," + addbirthyear + "," + addpoliticalparty + "\n"
 		newpolitician2 = newpolitician.split()
 		newentry = oglist.append(newpolitician2)
-		print(oglist)
 		politicians.write(newpolitician)
 		politicians.close()
 		print("The user has been added to the database.")
