@@ -1,5 +1,5 @@
-politicians = open("politicians.csv") # with open("politicians.csv") as f 
-people = 0
+politicians = open("politicians.csv") # or open("politicians.csv") as f 
+people = 0 
 oglist = []
 
 #printing the available options and appending them into a multi-dimensional list so it's usable
@@ -11,7 +11,7 @@ for line in politicians:
 		birthyear = row[2]
 		politicalparty = row[3]
 		print("[" + str(people) + "] " + firstname + " " + name + " was born in " + birthyear + " and member of the " + politicalparty + " party.")
-		people = people + 1
+		people = people + 1 #counting people
 
 print("\nThere are " + str(people) + " total people in the database.")
 
@@ -24,22 +24,22 @@ def mutations(): # function so you can start over again with everything until 'q
 		questioninput = input("\nPlease choose between the following 4 options: REMOVE or ADD to the database or QUIT the program. What do you want to do?").strip().lower()
 
 	if questioninput == "remove":
-		rpeople = 0
-		rpoliticians = open("politicians.csv")
+		r_people = 0
+		r_politicians = open("politicians.csv")
 		print("These are the current entries:")
 		
-		for rline in rpoliticians:
-				rrow = rline.strip().split(",")
-				rfirstname = rrow[0]
-				rname = rrow[1]
-				rbirthyear = rrow[2]
-				rpoliticalparty = rrow[3]
-				print("[" + str(rpeople) + "] " + rfirstname + " " + rname + " was born in " + rbirthyear + " and member of the " + rpoliticalparty + " party.")
-				rpeople = (rpeople + 1)
+		for r_line in rpoliticians: #giving the current options in file, because might be already added (add doesnt write in memory) - might need to change that so I can just write out of the list and just replace there aswell
+				r_row = r_line.strip().split(",")
+				r_firstname = r_row[0]
+				r_name = r_row[1]
+				r_birthyear = r_row[2]
+				r_politicalparty = r_row[3]
+				print("[" + str(r_people) + "] " + r_firstname + " " + r_name + " was born in " + r_birthyear + " and member of the " + r_politicalparty + " party.")
+				r_people = (r_people + 1)
 		
 		removedrow = int(input("\nWhat row dou you want to have removed? Row "))
 		oglist.pop(removedrow)		
-		rpoliticians = open("politicians.csv","w")
+		r_politicians = open("politicians.csv","w") #changing it to writing instead of reading
 		
 		for line in oglist:
 			converted = ",".join(line)
